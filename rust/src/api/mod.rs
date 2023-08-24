@@ -38,7 +38,7 @@ use jni_sys::{
     JNI_EVERSION,
     JNI_OK,
     JNI_TRUE,
-    JNI_VERSION_1_8,
+    JNI_VERSION_10,
     JNIEnv,
     jobject,
     jsize,
@@ -169,7 +169,7 @@ impl Jvm {
                     .collect();
 
                 let mut jvm_arguments = JavaVMInitArgs {
-                    version: JNI_VERSION_1_8,
+                    version: JNI_VERSION_10,
                     nOptions: jvm_options.len() as i32,
                     options: jvm_options_vec.as_mut_ptr(),
                     ignoreUnrecognized: JNI_TRUE,
